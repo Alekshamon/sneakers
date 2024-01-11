@@ -4,6 +4,28 @@ function App() {
   return (
     <>
       <div className="wrapper headerLeft clear d-flex justify-between p-40">
+        <div className="overlay">
+          <div className="drawer">
+            <h2 className="mb-20">Panier</h2>
+            <div className="cartItem d-flex align-center">
+              <div
+                style={{ backgroundImage: "url(/img/sneakers/1.jpg)" }}
+                className="cartItemImg"
+              ></div>
+              <div className="mr-20">
+                <p className="mb-5">Nike Blazer Mid Suede</p>
+                <b>95.99€</b>
+              </div>
+              <img
+                className="removeBtn"
+                width={30}
+                height={30}
+                src="/img/close-square.svg"
+              ></img>
+            </div>
+          </div>
+        </div>
+
         <header className="d-flex ">
           <div className="d-flex align-center">
             <img width={40} height={40} src="/img/logo.png" alt="Logo" />
@@ -30,17 +52,21 @@ function App() {
         </ul>
       </div>
 
-      <div className="content mb-40 justify-between aligne-center headerLeft">
-        <h1 className="title ">Baskets</h1>
-        <div className="search-block">
-          <img src="/public/search.svg" alt="Search" />
-          <input placeholder="Search...." />
+      <div className="content headerLeft">
+        <div className="d-flex title-search">
+          <div>
+            <h1 className="title ">Baskets</h1>
+          </div>
+          <div className="search-block">
+            <img src="/search.svg" alt="Search" />
+            <input placeholder="Search...." />
+          </div>
         </div>
 
         <div className="cardAll d-flex">
           <div className="card align-center	">
             <div className="favorite">
-              <img src="/img/like-1.svg" />
+              <img src="/img/like-1.svg" alt="unliked" />
             </div>
 
             <img
@@ -62,7 +88,7 @@ function App() {
           </div>
           <div className="card align-center	">
             <div className="favorite">
-              <img src="/img/like-1.svg" />
+              <img src="/img/like-2.svg" />
             </div>
             <img
               width={120}
